@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #DCDCDC;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.DirectorWindowController">
+   <children>
+      <AnchorPane layoutY="55.0" prefHeight="345.0" prefWidth="600.0" style="-fx-background-color: #C0C0C0;">
+         <children>
+            <ButtonBar prefHeight="40.0" prefWidth="200.0" />
+            <TabPane layoutY="-1.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="346.0" prefWidth="600.0" side="LEFT" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                  <Tab fx:id="my_account_tab" text="My account">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TabPane prefHeight="346.0" prefWidth="572.0" side="BOTTOM" tabClosingPolicy="UNAVAILABLE">
+                                 <tabs>
+                                    <Tab fx:id="my_account_personal_info_tab" text="Personal info">
+                                       <content>
+                                          <AnchorPane focusTraversable="true" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <Button fx:id="my_account_personal_info_get_button" layoutX="361.0" layoutY="134.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="151.0" style="-fx-background-radius: 20;" text="Get personal info" />
+                                                <TextArea fx:id="my_account_personal_info_text_area" layoutX="14.0" layoutY="8.0" prefHeight="301.0" prefWidth="264.0" />
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </Tab>
+                                    <Tab fx:id="my_account_change_password_tab" text="Change password">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <Text layoutX="123.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter information">
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Text>
+                                                <Button fx:id="my_account_change_password_ok_button" layoutX="72.0" layoutY="210.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="102.0" style="-fx-background-radius: 20;" text="Ok" />
+                                                <PasswordField fx:id="my_account_change_password_new_password_box" layoutX="72.0" layoutY="120.0" prefHeight="31.0" prefWidth="300.0" promptText="New password" style="-fx-background-radius: 20;" />
+                                                <PasswordField fx:id="my_account_change_password_repeat_password_box" layoutX="72.0" layoutY="159.0" prefHeight="31.0" prefWidth="300.0" promptText="Repeat password" style="-fx-background-radius: 20;" />
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </Tab>
+                                 </tabs>
+                              </TabPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                <Tab fx:id="employees_tab" text="Employees">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TabPane prefHeight="346.0" prefWidth="574.0" side="BOTTOM" tabClosingPolicy="UNAVAILABLE">
+                                <tabs>
+                                  <Tab fx:id="employee_personal_info_tab" text="Personal info">
+                                       <content>
+                                          <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <Text layoutX="125.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter information">
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Text>
+                                                <Button fx:id="employee_personal_info_ok_button" layoutX="69.0" layoutY="204.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="102.0" style="-fx-background-radius: 20;" text="Ok" />
+                                                <TextField fx:id="employee_personal_info_surname_box" layoutX="69.0" layoutY="159.0" prefHeight="30.0" prefWidth="297.0" promptText="Surname" style="-fx-background-radius: 20;" />
+                                                <TextField fx:id="employee_personal_info_name_box" layoutX="69.0" layoutY="111.0" prefHeight="30.0" prefWidth="297.0" promptText="Name" style="-fx-background-radius: 20;" />
+                                                <Button fx:id="employee_personal_info_get_employees_button" layoutX="196.0" layoutY="204.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="170.0" style="-fx-background-radius: 20;" text="Get list of employees" />
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </Tab>
+                                  <Tab fx:id="employee_hiring_tab" text="Hiring">
+                                       <content>
+                                          <AnchorPane fx:id="e_h_middle_name_box" prefHeight="352.0" prefWidth="574.0">
+                                             <children>
+                                                <Text layoutX="66.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter information">
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="employee_hiring_name_box" layoutX="66.0" layoutY="75.0" prefHeight="30.0" prefWidth="200.0" promptText="Name" style="-fx-background-radius: 20;" />
+                                                <Button fx:id="employee_hiring_ok_button" layoutX="66.0" layoutY="240.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="102.0" style="-fx-background-radius: 20;" text="Ok" />
+                                                <TextField fx:id="employee_hiring_surname_box" layoutX="66.0" layoutY="114.0" prefHeight="30.0" prefWidth="200.0" promptText="Surname" style="-fx-background-radius: 20;" />
+                                                <TextField fx:id="employee_hiring_middle_name_box" layoutX="66.0" layoutY="153.0" prefHeight="30.0" prefWidth="200.0" promptText="Middle name" style="-fx-background-radius: 20;" />
+                                                <TextField fx:id="employee_hiring_telephone_number_box" layoutX="66.0" layoutY="191.0" prefHeight="30.0" prefWidth="200.0" promptText="Telephone number" style="-fx-background-radius: 20;" />
+                                                <TextField fx:id="employee_hiring_birthday_box" layoutX="287.0" layoutY="74.0" prefHeight="30.0" prefWidth="200.0" promptText="Birthday" style="-fx-background-radius: 20;" />
+                                                <TextField fx:id="employee_hiring_hiring_date_box" layoutX="287.0" layoutY="114.0" prefHeight="30.0" prefWidth="200.0" promptText="Hiring date" style="-fx-background-radius: 20;" />
+                                                <TextField fx:id="employee_hiring_salary_box" layoutX="287.0" layoutY="153.0" prefHeight="30.0" prefWidth="200.0" promptText="Salary" style="-fx-background-radius: 20;" />
+                                                <TextField fx:id="employee_hiring_user_login_box" layoutX="287.0" layoutY="191.0" prefHeight="30.0" prefWidth="200.0" promptText="User login" style="-fx-background-radius: 20;" />
+                                                <Text layoutX="335.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date:&quot;yyyy-mm-dd&quot;" />
+                                                <ComboBox fx:id="employee_hiring_role_box" layoutX="290.0" layoutY="231.0" prefHeight="31.0" prefWidth="194.0" promptText="Roles" style="-fx-background-color: #DCDCDC; -fx-background-radius: 20;" />
+                                                <Button fx:id="employee_hiring_role_get_button" layoutX="502.0" layoutY="231.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="47.0" style="-fx-background-radius: 0; -fx-background-radius: 20;" text="Get" />
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </Tab>
+                                    <Tab fx:id="employee_dismissal_tab" text="Dismissal">
+                                       <content>
+                                          <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <Text layoutX="122.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter information">
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Text>
+                                                <Button fx:id="employee_dismissal_ok_button" layoutX="66.0" layoutY="195.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="102.0" style="-fx-background-radius: 20;" text="Ok" />
+                                                <TextField fx:id="employee_dismissal_login_box" layoutX="66.0" layoutY="143.0" prefHeight="30.0" prefWidth="297.0" promptText="Login" style="-fx-background-radius: 20;" />
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </Tab>
+                                    <Tab fx:id="employee_salary_tab" text="Salary">
+                                       <content>
+                                          <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <Text layoutX="117.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter information">
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Text>
+                                                <Button fx:id="employee_salary_ok_button" layoutX="61.0" layoutY="231.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="102.0" style="-fx-background-radius: 20;" text="Ok" />
+                                                <TextField fx:id="employee_salary_new_salary_box" layoutX="61.0" layoutY="173.0" prefHeight="30.0" prefWidth="297.0" promptText="New salary" style="-fx-background-radius: 20;" />
+                                                <TextField fx:id="employee_salary_login_box" layoutX="61.0" layoutY="128.0" prefHeight="30.0" prefWidth="297.0" promptText="Login" style="-fx-background-radius: 20;" />
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </Tab>
+                                    <Tab fx:id="employee_adding_emp_to_dep_tab" text="Emp to dep actions">
+                                       <content>
+                                          <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <Text layoutX="127.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter information">
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Text>
+                                                <Button fx:id="employee_adding_emp_to_dep_add_button" layoutX="61.0" layoutY="211.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="102.0" style="-fx-background-radius: 20;" text="Add" />
+                                                <TextField fx:id="employee_adding_emp_to_dep_login_box" layoutX="61.0" layoutY="117.0" prefHeight="30.0" prefWidth="297.0" promptText="Login" style="-fx-background-radius: 20;" />
+                                                <Button fx:id="employee_adding_emp_to_dep_delete_button" layoutX="256.0" layoutY="211.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="102.0" style="-fx-background-radius: 20;" text="Delete" />
+                                                <ComboBox fx:id="employee_adding_emp_to_dep_dep_name_box" layoutX="61.0" layoutY="162.0" prefHeight="31.0" prefWidth="297.0" promptText="Departments" style="-fx-background-color: #DCDCDC; -fx-background-radius: 20;" />
+                                                <Button fx:id="employee_adding_emp_to_dep_dep_names_button" layoutX="371.0" layoutY="162.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="47.0" style="-fx-background-radius: 0; -fx-background-radius: 20;" text="Get" />
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </Tab>
+                                    <Tab fx:id="employee_new_department_tab" text="Department actions">
+                                       <content>
+                                          <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <Text layoutX="117.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter information">
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Text>
+                                                <Button fx:id="employee_new_department_add_button" layoutX="61.0" layoutY="212.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="102.0" style="-fx-background-radius: 20;" text="Add" />
+                                                <TextField fx:id="employee_new_department_name_box" layoutX="61.0" layoutY="119.0" prefHeight="30.0" prefWidth="297.0" promptText="Name" style="-fx-background-radius: 20;" />
+                                                <Button fx:id="employee_new_department_delete_button" layoutX="256.0" layoutY="212.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="102.0" style="-fx-background-radius: 20;" text="Delete" />
+                                                <ComboBox fx:id="employee_new_department_role_box" layoutX="61.0" layoutY="165.0" prefHeight="31.0" prefWidth="297.0" promptText="Roles" style="-fx-background-color: #DCDCDC; -fx-background-radius: 20;" />
+                                                <Button fx:id="employee_new_department_get_roles_button" layoutX="372.0" layoutY="165.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="47.0" style="-fx-background-radius: 0; -fx-background-radius: 20;" text="Get" />
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </Tab>
+                                </tabs>
+                              </TabPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                </Tab>
+                <Tab fx:id="reports_tab" text="Reports">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TabPane prefHeight="346.0" prefWidth="574.0" side="BOTTOM" tabClosingPolicy="UNAVAILABLE">
+                                <tabs>
+                                  <Tab fx:id="reports_check_reports_tab" text="Check reports">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <DatePicker fx:id="reports_check_reports_date_start_box" layoutX="14.0" layoutY="48.0" prefHeight="26.0" prefWidth="240.0" />
+                                                <Text layoutX="72.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date start" wrappingWidth="124.5367431640625">
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text layoutX="377.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date end" wrappingWidth="124.5367431640625">
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Text>
+                                                <DatePicker fx:id="reports_check_reports_date_end_box" layoutX="304.0" layoutY="48.0" prefHeight="26.0" prefWidth="240.0" />
+                                                <TableView fx:id="reports_check_reports_table" layoutX="14.0" layoutY="81.0" prefHeight="230.0" prefWidth="531.0">
+                                                  <columns>
+                                                      <TableColumn fx:id="reports_check_reports_table_c_description" prefWidth="131.20001220703125" text="Description" />
+                                                      <TableColumn fx:id="reports_check_reports_table_c_dep" minWidth="6.39996337890625" prefWidth="144.8000030517578" text="Department" />
+                                                      <TableColumn fx:id="reports_check_reports_table_c_emp" prefWidth="140.00006103515625" text="Employee" />
+                                                      <TableColumn fx:id="reports_check_reports_table_c_date" minWidth="8.0" prefWidth="114.39996337890625" text="Date" />
+                                                  </columns>
+                                                </TableView>
+                                                <Button fx:id="reports_check_reports_get_reports_button" layoutX="217.0" layoutY="10.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="125.0" style="-fx-background-radius: 20;" text="Get reports" />
+                                             </children></AnchorPane>
+                                    </content>
+                                  </Tab>
+                                  <Tab fx:id="reports_check_standards_tab" text="Check standards">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <TableView fx:id="reports_check_standards_table" layoutY="54.0" prefHeight="267.0" prefWidth="571.0">
+                                                   <columns>
+                                                      <TableColumn fx:id="reports_check_standards_table_c_standard" prefWidth="167.19997864961624" text="Standard" />
+                                                      <TableColumn fx:id="reports_check_standards_table_c_role" prefWidth="101.60005187988281" text="Role" />
+                                                      <TableColumn fx:id="reports_check_standards_table_c_date_start" prefWidth="149.59991455078125" text="Date start" />
+                                                      <TableColumn fx:id="reports_check_standards_table_c_date_end" prefWidth="149.59991455078125" text="Date end" />
+                                                   </columns>
+                                                </TableView>
+                                                <Button fx:id="reports_check_standards_get_standards_button" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="102.0" style="-fx-background-radius: 20;" text="Get standards" />
+                                             </children></AnchorPane>
+                                    </content>
+                                  </Tab>
+                                    <Tab fx:id="reports_new_standard_tab" text="New standard">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <DatePicker fx:id="reports_new_standard_date_start_box" layoutX="53.0" layoutY="159.0" prefHeight="31.0" prefWidth="299.0" promptText="Date start" />
+                                                <Button fx:id="reports_new_standard_ok_button" layoutX="53.0" layoutY="255.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="102.0" style="-fx-background-radius: 20;" text="Ok" />
+                                                <TextField fx:id="reports_new_standard_name_box" layoutX="53.0" layoutY="76.0" prefHeight="30.0" prefWidth="297.0" promptText="Standard name" style="-fx-background-radius: 20;" />
+                                                <DatePicker fx:id="reports_new_standard_date_end_box" layoutX="53.0" layoutY="203.0" prefHeight="31.0" prefWidth="299.0" promptText="Date end" />
+                                                <Text layoutX="109.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter information">
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Text>
+                                                <ComboBox fx:id="reports_new_standard_role_box" layoutX="53.0" layoutY="114.0" prefHeight="31.0" prefWidth="297.0" promptText="Roles" style="-fx-background-color: #DCDCDC; -fx-background-radius: 20;" />
+                                                <Button fx:id="reports_new_standard_get_roles_button" layoutX="366.0" layoutY="114.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="47.0" style="-fx-background-radius: 0; -fx-background-radius: 20;" text="Get" />
+                                             </children></AnchorPane>
+                                       </content>
+                                    </Tab>
+                                </tabs>
+                              </TabPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab fx:id="assortment_tab" text="Assortment">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TabPane prefHeight="346.0" prefWidth="574.0" side="BOTTOM" tabClosingPolicy="UNAVAILABLE">
+                                <tabs>
+                                    <Tab fx:id="assortment_products_tab" text="Get products">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <Button fx:id="assortment_products_update_button" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="134.0" style="-fx-background-radius: 20;" text="Update" />
+                                                <TableView fx:id="assortment_products_table" layoutY="59.0" prefHeight="260.0" prefWidth="572.0">
+                                                   <columns>
+                                                      <TableColumn fx:id="assortment_products_table_c_name" prefWidth="99.19994431734085" text="Name" />
+                                                      <TableColumn fx:id="assortment_products_table_c_type" prefWidth="84.0" text="Type" />
+                                                      <TableColumn fx:id="assortment_products_table_c_subtype" prefWidth="83.20004272460938" text="Subtype" />
+                                                      <TableColumn fx:id="assortment_products_table_c_quantity" prefWidth="72.800048828125" text="Quantity" />
+                                                      <TableColumn fx:id="assortment_products_table_c_price" prefWidth="86.39996337890625" text="Price" />
+                                                      <TableColumn fx:id="assortment_products_table_c_description" prefWidth="150.39996337890625" text="Description" />
+                                                   </columns>
+                                                </TableView>
+                                                <Button fx:id="assortment_products_get_more_information_button" layoutX="425.0" layoutY="14.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="134.0" style="-fx-background-radius: 20;" text="Get more information" />
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </Tab>
+                                  <Tab fx:id="assortment_new_characteristic_tab" text="Characteristics">
+                                    <content>
+                                      <AnchorPane fx:id="assortment_characteristic_description_box" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <Text layoutX="143.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter information">
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="assortment_new_characteristic_name_box" layoutX="92.0" layoutY="109.0" prefHeight="30.0" prefWidth="297.0" promptText="Characteristic name" style="-fx-background-radius: 20;" />
+                                                <Button fx:id="assortment_new_characteristic_add_button" layoutX="92.0" layoutY="205.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="102.0" style="-fx-background-radius: 20;" text="Add" />
+                                                <TextField fx:id="assortment_new_characteristic_description_box" layoutX="92.0" layoutY="152.0" prefHeight="30.0" prefWidth="297.0" promptText="Description" style="-fx-background-radius: 20;" />
+                                                <Button fx:id="assortment_new_characteristic_delete_button" layoutX="287.0" layoutY="205.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="102.0" style="-fx-background-radius: 20;" text="Delete" />
+                                                <Button fx:id="assortment_new_characteristic_get_characteristics_button" layoutX="177.0" layoutY="254.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="126.0" style="-fx-background-radius: 20;" text="Get characteristics" />
+                                             </children></AnchorPane>
+                                    </content>
+                                  </Tab>
+                                  <Tab fx:id="assortment_product_detail_tab" text="Product details">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <Text layoutX="142.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter information">
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Text>
+                                                <Button fx:id="assortment_new_product_detail_add_button" layoutX="85.0" layoutY="229.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="102.0" style="-fx-background-radius: 20;" text="Add" />
+                                                <TextField fx:id="assortment_new_product_detail_product_name_box" layoutX="86.0" layoutY="109.0" prefHeight="30.0" prefWidth="297.0" promptText="Product name" style="-fx-background-radius: 20;" />
+                                                <TextField fx:id="assortment_new_product_detail_characteristic_name_box" layoutX="86.0" layoutY="151.0" prefHeight="30.0" prefWidth="297.0" promptText=" Characteristic name" style="-fx-background-radius: 20;" />
+                                                <Button fx:id="assortment_new_product_detail_delete_button" layoutX="276.0" layoutY="229.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="102.0" style="-fx-background-radius: 20;" text="Delete" />
+                                                <Button fx:id="assortment_new_product_detail_get_details_button" layoutX="171.0" layoutY="268.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="126.0" style="-fx-background-radius: 20;" text="Get details" />
+                                                <TextField fx:id="assortment_new_product_detail_description_box" layoutX="85.0" layoutY="191.0" prefHeight="30.0" prefWidth="297.0" promptText="Description" style="-fx-background-radius: 20;" />
+                                             </children></AnchorPane>
+                                    </content>
+                                  </Tab>
+                                    <Tab fx:id="assortment_new_type_tab" text="Types">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <Text layoutX="138.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter information">
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Text>
+                                                <Button fx:id="assortment_new_type_add_button" layoutX="82.0" layoutY="181.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="102.0" style="-fx-background-radius: 20;" text="Add" />
+                                                <TextField fx:id="assortment_new_type_name_box" layoutX="82.0" layoutY="128.0" prefHeight="30.0" prefWidth="297.0" promptText="Type name" style="-fx-background-radius: 20;" />
+                                                <Button fx:id="assortment_new_type_delete_button" layoutX="277.0" layoutY="181.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="102.0" style="-fx-background-radius: 20;" text="Delete" />
+                                                <Button fx:id="assortment_new_type_get_types_button" layoutX="167.0" layoutY="230.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="126.0" style="-fx-background-radius: 20;" text="Get types" />
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </Tab>
+                                    <Tab fx:id="assortment_new_subtype_tab" text="Subtypes">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <Text layoutX="151.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter information">
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Text>
+                                                <Button fx:id="assortment_new_subtype_add_button" layoutX="100.0" layoutY="206.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="102.0" style="-fx-background-radius: 20;" text="Add" />
+                                                <TextField fx:id="assortment_new_subtype_type_name_box" layoutX="95.0" layoutY="111.0" prefHeight="30.0" prefWidth="297.0" promptText="Type name" style="-fx-background-radius: 20;" />
+                                                <TextField fx:id="assortment_new_subtype_name_box" layoutX="95.0" layoutY="151.0" prefHeight="30.0" prefWidth="297.0" promptText="Subtype name" style="-fx-background-radius: 20;" />
+                                                <Button fx:id="assortment_new_subtype_delete_button" layoutX="290.0" layoutY="206.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="102.0" style="-fx-background-radius: 20;" text="Delete" />
+                                                <Button fx:id="assortment_new_subtype_get_subtypes_button" layoutX="180.0" layoutY="245.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="126.0" style="-fx-background-radius: 20;" text="Get subtypes" />
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </Tab>
+                                    <Tab fx:id="assortment_new_product_tab" text="Product">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <Text layoutX="151.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter information">
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Text>
+                                                <Button fx:id="assortment_new_product_add_button" layoutX="414.0" layoutY="172.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="102.0" style="-fx-background-radius: 20;" text="Add" />
+                                                <TextField fx:id="assortment_new_product_name_box" layoutX="95.0" layoutY="52.0" prefHeight="30.0" prefWidth="297.0" promptText="Name" style="-fx-background-radius: 20;" />
+                                                <TextField fx:id="assortment_new_product_price_box" layoutX="95.0" layoutY="243.0" prefHeight="30.0" prefWidth="297.0" promptText="Price" style="-fx-background-radius: 20;" />
+                                                <TextField fx:id="assortment_new_product_quantity_box" layoutX="95.0" layoutY="167.0" prefHeight="30.0" prefWidth="297.0" promptText="Quantity" style="-fx-background-radius: 20;" />
+                                                <TextField fx:id="assortment_new_product_description_box" layoutX="95.0" layoutY="204.0" prefHeight="30.0" prefWidth="297.0" promptText="Description" style="-fx-background-radius: 20;" />
+                                                <Button fx:id="assortment_new_product_delete_button" layoutX="414.0" layoutY="211.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="102.0" style="-fx-background-radius: 20;" text="Delete" />
+                                                <Button fx:id="assortment_new_product_update_button" layoutX="402.0" layoutY="250.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="126.0" style="-fx-background-radius: 20;" text="Update" />
+                                                <ComboBox fx:id="assortment_new_product_subtype_name_box" layoutX="95.0" layoutY="127.0" prefHeight="31.0" prefWidth="297.0" promptText="Subtype" style="-fx-background-color: #DCDCDC; -fx-background-radius: 20;" />
+                                                <ComboBox fx:id="assortment_new_product_type_name_box" layoutX="95.0" layoutY="88.0" prefHeight="31.0" prefWidth="297.0" promptText="Type" style="-fx-background-color: #DCDCDC; -fx-background-radius: 20;" />
+                                                <Button fx:id="assortment_new_product_get_subtypes_button" layoutX="414.0" layoutY="127.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="47.0" style="-fx-background-radius: 0; -fx-background-radius: 20;" text="Get" />
+                                                <Button fx:id="assortment_new_product_get_types_button" layoutX="414.0" layoutY="88.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="47.0" style="-fx-background-radius: 0; -fx-background-radius: 20;" text="Get" />
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </Tab>
+                                </tabs>
+                              </TabPane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </TabPane>
+         </children></AnchorPane>
+      <Label alignment="CENTER" layoutX="192.0" layoutY="14.0" prefHeight="34.0" prefWidth="215.0" text="Director">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Button fx:id="exit_button" layoutX="483.0" layoutY="17.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="102.0" style="-fx-background-radius: 20;" text="Exit" />
+   </children>
+</AnchorPane>
